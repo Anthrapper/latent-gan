@@ -23,7 +23,7 @@ class RunRunner:
 
     def run(self):
         print("Model LatentGAN running, encoding training set")
-        encode(smiles_file=self.smiles_file, output_smiles_file_path=self.output_latent,encoder=self.encoder)
+        encode(smiles_file=self.smiles_file, output_latent_file_path=self.output_latent,encoder=self.encoder)
         print("Encoding finished finished. Creating model files")
         C = CreateModelRunner(input_data_path=self.output_latent, output_model_folder=self.storage_path)
         C.run()
